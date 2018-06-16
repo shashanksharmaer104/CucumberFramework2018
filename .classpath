@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="libs/cucumberJars/cucumber-core-1.2.5.jar"/>
+	<classpathentry kind="lib" path="libs/cucumberJars/cucumber-java-1.2.5.jar"/>
+	<classpathentry kind="lib" path="libs/cucumberJars/cucumber-junit-1.2.5.jar" sourcepath="C:/Users/Shashank Sharma/.m2/repository/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5-sources.jar"/>
+	<classpathentry kind="lib" path="libs/cucumberJars/cucumber-jvm-deps-1.0.5.jar"/>
+	<classpathentry kind="lib" path="libs/cucumberJars/cucumber-reporting-3.17.1.jar"/>
+	<classpathentry kind="lib" path="libs/cucumberJars/gherkin-2.12.2.jar"/>
+	<classpathentry kind="lib" path="libs/cucumberJars/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="libs/cucumberJars/mockito-all-2.0.2-beta.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/byte-buddy-1.8.3.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/client-combined-3.12.0-sources.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/client-combined-3.12.0.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/guava-23.6-jre.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/okhttp-3.9.1.jar"/>
+	<classpathentry kind="lib" path="libs/seleniumJars/okio-1.13.0.jar"/>
+	<classpathentry kind="lib" path="libs/cucumberJars/cobertura-2.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/cucumberJars/cucumber-html-0.2.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
