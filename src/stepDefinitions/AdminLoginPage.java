@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,6 +7,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import hooks.Hooks;
+import logs.Log;
 
 public class AdminLoginPage {
 
@@ -21,6 +21,7 @@ public class AdminLoginPage {
 	@Given("^User is on TalentCentral Admin$")
 	public void openTCAdmin() {
 		try {
+			Log.info("URL: " + "https://talentcentral.cebglobal.com/admin/login");
 			driver.get("https://talentcentral.cebglobal.com/admin/login");			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -30,7 +31,7 @@ public class AdminLoginPage {
 	@When("^User enteres \"([^\"]*)\" as username and \"([^\"]*)\" as password$")
 	public void enterUsernamePassword(String user, String pass) {
 		try {
-			System.out.println("Entering username and password");
+			Log.info("Username and password entered");
 		    driver.findElement(By.id("j_username")).sendKeys(user);
 		    driver.findElement(By.id("j_password")).sendKeys(pass);
 		} catch (Exception e) {
@@ -40,7 +41,8 @@ public class AdminLoginPage {
 	@When("^User clicks on submit button$")
 	public void clickSubmitButton() throws Throwable {
 		try {
-			driver.findElement(By.id("proceed")).click();			
+			driver.findElement(By.id("proceed")).click();	
+			Log.info("Submit button clicked");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -54,6 +56,7 @@ public class AdminLoginPage {
 			if(currentTittle.equals("Select Company | TalentCentral")) {
 				System.out.println("Title matched");
 				//Assert.fail();
+				Log.info("Logged in successfully !!!");
 			}else{
 				System.err.println("Title matcheded");
 			}			

@@ -12,17 +12,45 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import logs.Log;
 
 public class Hooks {
 
+	//public static Scenario scenario = null;
 	public static WebDriver driver = null;
 	
+	public Hooks() {
+		
+	}
+	
 	@Before
-	/**
-	 * Delete all cookies at the start of each scenario to avoid
-	 * shared state between tests
-	 */
+	public void beforeScenario(Scenario scenario) {
+		try {
+			System.out.println("Scenario Started: " + scenario.getName());
+			this.openBrowser();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@After
+	public void afterScenario(Scenario scenario) {
+		System.out.println("Scenario ends: " + scenario.getName());
+		this.closeBrowser();
+	}
+	
 	public void openBrowser() throws MalformedURLException {
+		Log.info("****************************************************************************************");
+		 
+		Log.info("****************************************************************************************");
+	 
+		Log.info("$$$$$$$$$$$$$$$$$$$$$                 Browser Opened       $$$$$$$$$$$$$$$$$$$$$$$$$");
+	 
+		Log.info("****************************************************************************************");
+	 
+		Log.info("****************************************************************************************");
 		System.out.println("Called openBrowser");
 		System.out.println("Project path: " + System.getProperty("user.dir"));
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
@@ -32,10 +60,10 @@ public class Hooks {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-	@After
-	/**
-	 * Embed a screenshot in test report if test is marked as failed
-	 */
+	public void closeBrowser() {		
+		driver.quit();
+	}
+	
 	public void embedScreenshot(Scenario scenario) {
 		if(scenario.isFailed()) {
 			try {
@@ -47,7 +75,7 @@ public class Hooks {
 				System.err.println(somePlatformsDontSupportScreenshots.getMessage());
 			} 
 		}
-		driver.quit();
+		Log.info("XXXXXXXXXXXXXXXXXXXXXXX             "+"-E---N---D-"+"             XXXXXXXXXXXXXXXXXXXXXX");
 	}
 	
 }

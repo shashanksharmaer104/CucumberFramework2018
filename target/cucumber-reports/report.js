@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 3641745997,
+  "duration": 4939327597,
   "status": "passed"
 });
 formatter.scenario({
@@ -42,7 +42,7 @@ formatter.match({
   "location": "AdminLoginPage.openTCAdmin()"
 });
 formatter.result({
-  "duration": 8948127456,
+  "duration": 6847411397,
   "status": "passed"
 });
 formatter.match({
@@ -59,25 +59,25 @@ formatter.match({
   "location": "AdminLoginPage.enterUsernamePassword(String,String)"
 });
 formatter.result({
-  "duration": 234971262,
+  "duration": 234217792,
   "status": "passed"
 });
 formatter.match({
   "location": "AdminLoginPage.clickSubmitButton()"
 });
 formatter.result({
-  "duration": 4812289255,
+  "duration": 1380681864,
   "status": "passed"
 });
 formatter.match({
   "location": "AdminLoginPage.user_should_be_able_to_login_successfully()"
 });
 formatter.result({
-  "duration": 6373420,
+  "duration": 8441211,
   "status": "passed"
 });
 formatter.after({
-  "duration": 643274579,
+  "duration": 647386662,
   "status": "passed"
 });
 });
